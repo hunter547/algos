@@ -1,4 +1,6 @@
-# Hasmap/Dictionary and Double Linked List approach
+# Great article explaining LRU Cache: https://betterprogramming.pub/how-to-build-an-lru-cache-in-less-than-10-minutes-and-100-lines-of-code-fddad56d7af5
+
+# Hashmap/Dictionary and Double Linked List approach
 
 # Base class
 class LRUCache(object):
