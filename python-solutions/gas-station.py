@@ -2,6 +2,9 @@
 # is greater than the gas able to be received at the current station plus any gas in the tank, then
 # we can safely assume that the current index can't be the starting point and we can move the
 # start_station pointer to the next gas statiton in the list.
+from typing import List
+
+
 class Solution:
     def canCompleteCircuit(self, gas: List[int], cost: List[int]) -> int:
         total_tank, start_station, curr_tank = 0, 0, 0
