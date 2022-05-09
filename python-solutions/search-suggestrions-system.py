@@ -45,8 +45,8 @@ class Trie:
                     node.children[i], prefix + chr(ord("a") + i), words)
 
     def lexicographicalMinimums(self, prefix: str):
-        currentNode = self.search(prefix)
         words = []
+        currentNode = self.search(prefix)
         if not currentNode:
             return words
         self.collectTopThreeWords(currentNode, prefix, words)
