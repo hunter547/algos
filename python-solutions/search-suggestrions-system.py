@@ -55,15 +55,11 @@ class Trie:
 
 class Solution:
     def suggestedProducts(self, products: List[str], searchWord: str) -> List[List[str]]:
-        root = buildTrie(products)
+        root = Trie()
+        # Insert all products into the trie to be searched later
+        for product in products:
+            root.insert(product)
         result = []
         for i in range(len(searchWord)):
             result.append(root.lexicographicalMinimums(searchWord[:i+1]))
         return result
-
-
-def buildTrie(products: List[str]) -> Trie:
-    root = Trie()
-    for product in products:
-        root.insert(product)
-    return root
